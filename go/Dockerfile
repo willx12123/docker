@@ -6,7 +6,7 @@ RUN sed -e 's|^mirrorlist=|#mirrorlist=|g' \
         -e 's|^#baseurl=http://mirror.centos.org/centos|baseurl=https://mirrors.ustc.edu.cn/centos|g' \
         -i.bak /etc/yum.repos.d/CentOS-Base.repo \
         && yum makecache \
-        && yum install vim wget curl git -y
+        && yum install vim wget gcc curl git -y
 
 RUN cd ~ \
         && wget https://mirrors.ustc.edu.cn/golang/go1.16.5.linux-amd64.tar.gz \
