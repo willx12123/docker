@@ -10,7 +10,7 @@ RUN echo "deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free \
 
 RUN apt-get update \
         && apt-get upgrade -y \
-        && apt-get install vim wget curl git sqlite3 -y
+        && apt-get install vim wget curl git sqlite3 htop -y
 
 RUN cd ~ \
         && wget https://nodejs.org/dist/v14.17.5/node-v14.17.5-linux-x64.tar.xz \
