@@ -6,7 +6,8 @@ MAINTAINER willx12123 <willx12123@gmail.com>
 SHELL ["/bin/bash", "-c"]
 
 RUN echo "deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free \
-          deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free" > /etc/apt/sources.list
+          deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free" > /etc/apt/sources.list \
+        && echo "alias ll='ls $LS_OPTIONS -l'" >> ~/.bashrc
 
 RUN apt-get update \
         && apt-get upgrade -y \
