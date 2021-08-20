@@ -13,8 +13,8 @@ RUN apt-get update \
         && apt-get install vim wget curl git sqlite3 -y
 
 RUN cd ~ \
-        && wget https://nodejs.org/dist/v14.17.3/node-v14.17.3-linux-x64.tar.xz \
-        && tar -xf ./node-v14.17.3-linux-x64.tar.xz && rm node-v14.17.3-linux-x64.tar.xz && mv node-v14.17.3-linux-x64 /usr/local/node \
+        && wget https://nodejs.org/dist/v14.17.5/node-v14.17.5-linux-x64.tar.xz \
+        && tar -xf ./node-v14.17.5-linux-x64.tar.xz && rm node-v14.17.5-linux-x64.tar.xz && mv node-v14.17.5-linux-x64 /usr/local/node \
         && echo "export PATH='/usr/local/node/bin:$PATH'" >> ~/.bashrc \
         && source ~/.bashrc \
         && npm config set registry https://registry.npm.taobao.org \
@@ -24,3 +24,4 @@ RUN gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org
         && bundle config mirror.https://rubygems.org https://gems.ruby-china.com \
         && gem update --system \
         && gem install rails
+
