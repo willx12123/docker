@@ -9,7 +9,7 @@ RUN sed -e 's|^mirrorlist=|#mirrorlist=|g' \
         && yum install vim wget gcc curl git -y
 
 RUN cd ~ \
-        && wget https://mirrors.ustc.edu.cn/golang/go1.16.5.linux-amd64.tar.gz \
+        && wget https://mirrors.ustc.edu.cn/golang/go1.17.2.linux-amd64.tar.gz \
         && tar -zxvf ./go1.17.2.linux-amd64.tar.gz \
         && mv ./go /usr/local/go && rm go1.17.2.linux-amd64.tar.gz \
         && mkdir /go && cd /go && mkdir src bin pkg \
